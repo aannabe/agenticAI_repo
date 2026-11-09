@@ -31,11 +31,11 @@ Entry points: `src/main.cpp` (C++ executable), `python/example_tool.py` (Python 
 
 | Language | Files | Lines |
 |---|---:|---:|
-| Markdown | 16 | 581 |
-| Python | 3 | 247 |
+| Markdown | 16 | 586 |
+| Python | 3 | 248 |
 | JSON | 3 | 106 |
+| Other | 4 | 70 |
 | C++ | 4 | 69 |
-| Other | 3 | 49 |
 | CMake | 2 | 48 |
 | Bash | 1 | 39 |
 | TOML | 1 | 26 |
@@ -52,10 +52,11 @@ Entry points: `src/main.cpp` (C++ executable), `python/example_tool.py` (Python 
   CMakeLists.txt (43)
   CMakePresets.json (36)
   GEMINI.md (4)
+  LICENSE (21)
   README.md (109)
   pyproject.toml (26)
 .agents/skills/bash/
-  SKILL.md (49)
+  SKILL.md (53)
 .agents/skills/code-review/
   SKILL.md (21)
 .agents/skills/cpp/
@@ -81,13 +82,13 @@ Entry points: `src/main.cpp` (C++ executable), `python/example_tool.py` (Python 
 .vscode/
   settings.json (30)
 docs/
-  CODEMAP.md (102)
+  CODEMAP.md (103)
 include/myproject/
   greeter.hpp (12)
 python/
   example_tool.py (41)
 python/tests/
-  test_example_tool.py (16)
+  test_example_tool.py (17)
 scripts/
   codemap.py (190)
   example.sh (39)

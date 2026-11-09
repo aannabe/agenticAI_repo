@@ -1,4 +1,4 @@
-# Agentic coding template
+# Agentic Coding Template
 
 A starter repository for coding with AI agents (GitHub Copilot in VS Code first; Claude and
 Gemini work too). It ships with agent instructions, on-demand skills, safe command approvals,
