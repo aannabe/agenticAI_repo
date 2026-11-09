@@ -29,6 +29,6 @@ Advisory defaults. Deviate when there is a good reason, and say why.
 - Use simple functions first; add classes only when they model real state plus behavior.
 
 ## Verify before presenting (iterate, at most 5 attempts)
-1. `uv run ruff check .` and `uv run ruff format .`
+1. `uv run ruff check .` and `uv run ruff format --check .`
 2. `uv run pytest` (tests live in `python/tests/`). With no tests yet, run the script on a small example.
 3. Add or update a test for new behavior or a bug fix.

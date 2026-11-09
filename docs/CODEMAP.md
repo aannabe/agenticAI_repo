@@ -18,8 +18,8 @@ The **Overview** is maintained by hand (keep it short). The **Generated index** 
 
 Build and test:
 - C++: `cmake --preset debug`, `cmake --build --preset debug`, `ctest --preset debug`
-- Python: `uv run ruff check .`, `uv run pytest`
-- Bash: `shellcheck scripts/*.sh`
+- Python: `uv run ruff check .`, `uv run ruff format --check .`, `uv run pytest`
+- Bash: `bash -n scripts/example.sh`; optional: `shellcheck scripts/*.sh`, `shfmt -d scripts/`
 
 Entry points: `src/main.cpp` (C++ executable), `python/example_tool.py` (Python CLI),
 `scripts/example.sh` (Bash).

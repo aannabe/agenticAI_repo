@@ -44,6 +44,10 @@ main "$@" # entry point: pass all arguments through unchanged
   (`chmod +x`).
 
 ## Verify before presenting (iterate, at most 5 attempts)
-1. `shellcheck path/to/script.sh`. Fix findings; justify any `# shellcheck disable=` inline.
-2. `shfmt -d path/to/script.sh` (indent settings come from `.editorconfig`); apply with `shfmt -w`.
-3. Run it with sample input (use `--dry-run` for anything destructive).
+1. Run `bash -n path/to/script.sh` to check syntax.
+2. If installed, run `shellcheck path/to/script.sh` and fix findings; justify any
+   `# shellcheck disable=` inline.
+3. If installed, run `shfmt -d path/to/script.sh` (indent settings come from `.editorconfig`);
+   apply with `shfmt -w`.
+4. Run it with sample input (use `--dry-run` for anything destructive). ShellCheck and shfmt are
+   optional tools; their absence does not block verification.
