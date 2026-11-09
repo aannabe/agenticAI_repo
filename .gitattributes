@@ -1,0 +1,7 @@
+# Normalize line endings in the repo; check out as-is on each OS.
+* text=auto
+
+# Scripts must always be LF, even on Windows, or Bash fails with "\r: command not found".
+*.sh   text eol=lf
+*.bash text eol=lf
+*.py   text eol=lf

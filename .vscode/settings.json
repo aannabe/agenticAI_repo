@@ -1,0 +1,30 @@
+{
+  // Copilot in VS Code: use AGENTS.md (on by default; explicit for clarity).
+  "chat.useAgentsMdFile": true,
+
+  // Terminal approvals for agents. true = run without asking, false = always ask you first.
+  // Goal: the agent can run the build/lint/test loop freely, but never commit/push/etc.
+  // Note: if VS Code ignores workspace-level approval rules on your version, copy this
+  // block into your User Settings.
+  "chat.tools.terminal.autoApprove": {
+    // --- safe verify-loop commands ---
+    "/^cmake\\s+(--preset|--build)\\b/": true,
+    "/^ctest\\b/": true,
+    "/^uv\\s+run\\s+(ruff|pytest)\\b/": true,
+    "/^uv\\s+run\\s+--no-project\\s+scripts\\/codemap\\.py\\b/": true,
+    "/^shellcheck\\b/": true,
+    "/^shfmt\\s+-d\\b/": true,
+    "/^git\\s+(status|diff|log|show)\\b/": true,
+
+    // --- always require your approval ---
+    "/^git\\s+(commit|push|tag|remote|reset|clean|rebase|merge|stash|checkout|switch)\\b/": false,
+    "/^gh\\b/": false,
+    "/^uv\\s+(add|remove|lock)\\b/": false,
+    "/^pip3?\\s+install\\b/": false,
+    "/^(sudo|rm|rmdir|del|Remove-Item)\\b/i": false
+  },
+
+  "files.eol": "\n",
+  "files.insertFinalNewline": true,
+  "files.trimTrailingWhitespace": true
+}
