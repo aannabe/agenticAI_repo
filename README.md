@@ -15,8 +15,8 @@ and a small C++ / Python / Bash skeleton you can delete from.
    | Language | Commands |
    |---|---|
    | C++ | `cmake --preset debug` then `cmake --build --preset debug` then `ctest --preset debug` |
-   | Python | `uv run ruff check .` and `uv run pytest` |
-   | Bash | `shellcheck scripts/*.sh` and `shfmt -d scripts/` |
+   | Python | `uv run ruff check .`, `uv run ruff format --check .`, and `uv run pytest` |
+   | Bash | `bash -n scripts/example.sh`; optionally, `shellcheck scripts/*.sh` and `shfmt -d scripts/` |
 
 5. Optional: `uv run --no-project scripts/codemap.py` to refresh `docs/CODEMAP.md`.
 

@@ -11,7 +11,7 @@ import statistics
 from collections.abc import Sequence
 
 
-def summarize(values: Sequence[float]) -> dict[str, float]:
+def summarize(values: Sequence[float]) -> dict[str, int | float]:
     """Return the count, minimum, maximum and mean of ``values``.
 
     Raises ValueError if ``values`` is empty (there is nothing to summarize).
@@ -19,7 +19,7 @@ def summarize(values: Sequence[float]) -> dict[str, float]:
     if not values:
         raise ValueError("values must not be empty")
     return {
-        "count": float(len(values)),
+        "count": len(values),
         "min": min(values),
         "max": max(values),
         "mean": statistics.fmean(values),  # fmean: fast float mean from the standard library
