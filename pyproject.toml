@@ -1,0 +1,26 @@
+[project]
+name = "myproject"                 # rename when you start a new project
+version = "0.1.0"
+description = "Python helper scripts (plotting, data analysis, tooling) for this project"
+requires-python = ">=3.10"
+dependencies = []                  # add with `uv add <package>` (ask the user first)
+
+[dependency-groups]
+dev = [
+  "pytest>=8",
+  "ruff>=0.6",
+]
+
+[tool.uv]
+package = false                    # script-style project: nothing to build or install
+
+[tool.ruff]
+line-length = 100
+src = ["python"]                   # first-party code lives in python/ (for import sorting)
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP", "SIM"]   # pycodestyle, pyflakes, isort, bugbear, pyupgrade, simplify
+
+[tool.pytest.ini_options]
+testpaths = ["python/tests"]
+pythonpath = ["python"]            # lets tests do `import example_tool`
